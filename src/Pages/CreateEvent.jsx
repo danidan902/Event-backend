@@ -20,7 +20,7 @@ function CreateEvent() {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5001/api/events", event, {
+      await axios.post("https://event-frontend-irtg.onrender.com/api/events", event, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
