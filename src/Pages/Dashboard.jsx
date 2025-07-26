@@ -15,7 +15,7 @@ export default function Dashboard() {
         }
 
         // Call backend with userId in query string (no token header)
-        const res = await axios.get(`http://localhost:5001/api/events/profile?id=${userId}`);
+        const res = await axios.get(`https://event-frontend-irtg.onrender.com/api/events/profile?id=${userId}`);
         setUser(res.data.user);
       } catch (err) {
         toast.error('Failed to load profile');
