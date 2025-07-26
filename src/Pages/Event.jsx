@@ -9,7 +9,7 @@ function Events() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/api/events");
+        const res = await axios.get("https://event-frontend-irtg.onrender.com/api/events");
         setEvents(res.data);
       } catch (err) {
         toast.error("Could not load events");
