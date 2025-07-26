@@ -16,7 +16,7 @@ export default function Register() {
     setLoading(true);
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/api/auth/register", form);
+      await axios.post("https://event-frontend-irtg.onrender.com/api/auth/register", form);
       toast.success("Registered successfully!");
       navigate("/login");
     } catch (err) {
