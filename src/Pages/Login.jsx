@@ -16,7 +16,7 @@ export default function Login() {
     setLoading(true)
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5001/api/auth/login", form);
+      const res = await axios.post("https://event-frontend-irtg.onrender.com/api/auth/login", form);
       localStorage.setItem("token", res.data.token);
       toast.success("Logged in successfully!");
 
