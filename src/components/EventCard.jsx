@@ -14,7 +14,7 @@ export default function EventCard({ event, onDelete }) {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post(`http://localhost:5001/api/events/${event._id}/rsvp`, {
+      await axios.post(`https://event-frontend-irtg.onrender.com/api/events/${event._id}/rsvp`, {
         attendee: rsvpName,
       }, {
         headers: { Authorization: `Bearer ${token}` }
@@ -32,7 +32,7 @@ export default function EventCard({ event, onDelete }) {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5001/api/events/${event._id}`, {
+      await axios.delete(`https://event-frontend-irtg.onrender.com/api/events/${event._id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success(" Event deleted!");
